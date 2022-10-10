@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: dodgerblue;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            
+           
+            
+        </style>
+    </head>
+    <body>
+        <center><h1>Registration Form</h1></center>
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+            <center><div class="container">
+               
+                <label name='first'><b>First Name : </b></label>
+		        <input type='text' placeholder="Enter your first name" name='first' required><br>
+		        <label name='last'><b>Last Name :</b></label>
+		        <input type='text' placeholder='Enter your last name' name='last' required><br>
+		        <label name='se' ><b>Sex : </b></label>
+		        <input type='radio' name='se' value='male'>
+		        <label ><b>Male</b></label>
+		        <input type='radio' name='se' value='female'>
+		        <label ><b>Female</b></label><br>
+            	<label name ='mail'><b>Email Id :  </b></label>
+            	<input type="email" placeholder="Enter email" name="mail"   required><br>  
+            	<label name='psw'><b>Password : </b></label>
+            	<input type="text" placeholder="Enter Password" name="psw" required><br>  
+            	<button type="submit"><b>Signup</b></button><br>     
+            	
+            </div></center>
+        </form>
+    </body>
+</html>         
