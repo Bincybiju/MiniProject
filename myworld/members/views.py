@@ -22,6 +22,6 @@ def addrecord(request):
   d = request.POST['mail']
   e = request.POST['psw']
 
-  member = Members(firstname=a, lastname=b,se=c,mail=d,psw=e)
+  member = Members(firstname=a, lastname=b,sex=c,email=d,password=e)
   member.save()
   return HttpResponseRedirect(reverse('index'))
